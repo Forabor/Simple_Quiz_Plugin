@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+</head>
+<body>
+
+<h1><input type="text" id="quizName" class="quizName" placeholder="Enter your quiz name"/></h1>
+<div class="header">
+    <ol id="inputQuestions">
+        <li>
+            <input type="text" id="question0" placeholder="Enter your question here."/> <input type="text" id="answer0"
+                                                                                               placeholder="Enter the answer here."/>
+        </li>
+
+    </ol>
+</div>
+<p onclick="addQuestionInput();" class="newQuestionButton" id="newQuestionButton">New Question.</p>
+
+<p onclick="add10Questions();" class="newQuestionButton10" id="newQuestionButton10">Add 10 Questions.</p>
+
+<p onclick="addXQuestions();" class="newQuestionButtonX" id="newQuestionButtonX">Add Multiple Questions.</p>
+</br>
+<p onClick="submitQuestions();" class="submitQuestionButton" id="submitQuestionButton">Submit</p>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="quizGiver.js"></script>
+
+</body>
+</html>
