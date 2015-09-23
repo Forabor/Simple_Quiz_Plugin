@@ -3,10 +3,10 @@
  * Plugin Name: Simple_Quiz_Plugin
  * Description: Make and do a quiz.
  * Plugin Author: Corey
- * Version: 1.0.0
+ * Version: 0.1.0
  */
 
-define( 'CAF_PLUGIN_VER', '1.0.0');
+define( 'CAF_PLUGIN_VER', '0.1.0');
 define('CAF_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 add_action('wp_enqueue_scripts', 'quiz_Mk2');
@@ -15,6 +15,7 @@ function quiz_Mk2(){
     $page_id = get_the_ID();
 
     wp_enqueue_script('caf-firebase', 'https://cdn.firebase.com/js/client/2.2.9/firebase.js', array('jquery'), CAF_PLUGIN_VER, false);
+
 
     if ($page_id == 12){
         wp_enqueue_script('caf-js-giver', CAF_PLUGIN_URL . 'assets/js/quizGiver.js', array('jquery', 'caf-firebase'), CAF_PLUGIN_VER, false);
